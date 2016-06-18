@@ -1,0 +1,22 @@
+NAME
+    wordcount -- count the number of words in all text files in a directory
+
+SYNOPSIS
+    ./wordcount [m] [r] [d]
+    
+DESCRIPTION
+    Counts the number of unique words in all regular text files in a directory. 
+    Command is only guaranteed to work on a POSIX compliant environment. 
+
+    [m]     The number of mapper threads that will be created.
+
+    [r]     The number of reducer threads that will be created.
+    
+    [d]     The full path name to a directory containing m text files.
+
+	m must be equal to the number of files in the directory d in order for execution 
+	to succeeed. The output files will be produced in the same directory as the 
+	input files named output0, output1, ..., outputr. 
+
+BUILD
+    A Makefile is provided which produces the executable named main. 
